@@ -16,7 +16,7 @@ class TripSerializer(serializers.ModelSerializer):
   password = serializers.CharField(source='user.password', write_only=True)
 
   # The following serializer represents a nested relationship.
-  luggage_items = LuggageItemSerializer(many=True, read_only=true)
+  luggage_items = LuggageItemSerializer(many=True, read_only=True)
 
   class Meta:
     model = Trip
